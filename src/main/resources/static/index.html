@@ -18,98 +18,106 @@
     <script src="js/theme.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
+
+
 </head>
 
 
 <body style="padding-top: 30px">
 
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse ">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">开源图床</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">上传图片</a></li>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">开源图床</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">上传图片</a></li>
 
-                        <li><a href="timeline.html">TimeLine</a>
+                <li><a href="timeline.html">TimeLine</a>
+                </li>
+                <li><a href="http://www.ymq.io">Blog</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-inverse">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">控制面板 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin.html">图片管理</a>
                         </li>
-                        <li><a href="http://www.ymq.io">Blog</a>
+                        <li><a href="oss.html">云存储设置</a>
                         </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right navbar-inverse">
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-haspopup="true" aria-expanded="false">控制面板 <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="admin.html">图片管理</a>
-                                </li>
-                                <li><a href="oss.html">云存储设置</a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">更多功能,内测中</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-haspopup="true" aria-expanded="false">欢迎：鹏磊 <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">个人资料-开发中</a>
-                                </li>
-                                <li><a href="#">修改密码-开发中</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">退出</a>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">更多功能,内测中</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-            </nav>
-
-            <div class="container kv-main">
-                <div class="page-header">
-                    <h1>Open source Picture bed</h1> 每个图片最大5 MB,每个请求最多10个文件
-                </div>
-
-                <form enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input id="file" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="1"
-                               data-max-file-count="10" name="file" accept="image/*">
-                    </div>
-                </form>
-
-                <div id="showurl" style="display: none;">
-
-
-                    <h3 id="error"></h3>
-
-                    <ul id="navTab" class="nav nav-tabs">
-                        <li class="active"><a href="#htmls" data-toggle="tab">HTML</a></li>
-                        <li><a href="#markdowns" data-toggle="tab">Markdown</a></li>
-                        <li><a href="#markdownlinks" data-toggle="tab">Markdown with Link</a></li>
-                        <li><a href="#urls" data-toggle="tab">URL</a></li>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">欢迎：鹏磊 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人资料-开发中</a>
+                        </li>
+                        <li><a href="#">修改密码-开发中</a>
+                        </li>
                     </ul>
-                    <div id="navTabContent" class="tab-content">
+                </li>
+                <li><a href="#">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container kv-main">
+    <div class="page-header">
+        <h1>Open source Picture bed</h1> 每个图片最大5 MB,每个请求最多10个文件
+    </div>
+
+    <form enctype="multipart/form-data">
+        <div class="form-group">
+            <input id="file" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="1"
+                   data-max-file-count="10" name="file" accept="image/*">
+        </div>
+    </form>
+
+    <div id="showurl" style="display: none;">
+
+
+        <h3 id="error"></h3>
+
+        <ul id="navTab" class="nav nav-tabs">
+            <li class="active"><a href="#htmls" data-toggle="tab">HTML</a></li>
+            <li><a href="#markdowns" data-toggle="tab">Markdown</a></li>
+            <li><a href="#markdownlinks" data-toggle="tab">Markdown with Link</a></li>
+            <li><a href="#urls" data-toggle="tab">URL</a></li>
+        </ul>
+        <div id="navTabContent" class="tab-content">
             <div class="tab-pane fade in active" id="htmls">
-                <pre style="margin-top: 5px;"><code id="html"></code></pre>
+                <pre style="margin-top: 5px;"><code id="html" onclick="copyText('html')"></code></pre>
             </div>
             <div class="tab-pane fade" id="markdowns">
-                <pre style="margin-top: 5px;"><code id="markdown"></code></pre>
+                <pre style="margin-top: 5px;"><code id="markdown" onclick="copyText('markdown')"></code></pre>
             </div>
             <div class="tab-pane fade" id="markdownlinks">
-                <pre style="margin-top: 5px;"><code id="markdownlink"></code></pre>
+                <pre style="margin-top: 5px;"><code id="markdownlink" onclick="copyText('markdownlink')"></code></pre>
             </div>
             <div class="tab-pane fade" id="urls">
-                <pre style="margin-top: 5px;"><code id="url"></code></pre>
+                <pre style="margin-top: 5px;"><code id="url" onclick="copyText('url')"></code></pre>
             </div>
 
+
         </div>
+
+    </div>
+    <div>
+        <div id="news"></div>
+        <textarea id="input" style="position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;">这是幕后黑手</textarea>
     </div>
 </div>
 
@@ -170,6 +178,27 @@
   </footer>
 
 <script src="js/ymq/index.js" type="text/javascript"></script>
-
+<script type="text/javascript">
+    function copyText(type) {
+        var text = "";
+        if (type == 'html') {
+            text = document.getElementById("html").innerText;
+        }
+        if (type == 'markdown') {
+            text = document.getElementById("markdowns").innerText;
+        }
+        if (type == 'markdownlink') {
+            text = document.getElementById("markdownlink").innerText;
+        }
+        if (type == 'url') {
+            text = document.getElementById("url").innerText;
+        }
+        var input = document.getElementById("input");
+        input.value = text; // 修改文本框的内容
+        input.select(); // 选中文本
+        document.execCommand("copy"); // 执行浏览器复制命令
+        $('#news').html('<font color="red">复制成功</font>').fadeIn().delay(3000).fadeOut(800);
+    }
+</script>
 </body>
 </html>
